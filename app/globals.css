@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.2), transparent 45%),
+    radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.2), transparent 50%),
+    #0f172a;
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 18s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.glass {
+  @apply rounded-3xl border border-white/10 bg-slate-900/60 shadow-xl shadow-sky-500/10 backdrop-blur;
+}
+
+.section-title {
+  @apply mb-3 text-sm font-semibold uppercase tracking-[0.4em] text-accent;
+}
+
+.section-heading {
+  @apply text-3xl font-bold text-foreground sm:text-4xl;
+}
+
+.section-description {
+  @apply mt-3 max-w-2xl text-base text-slate-300;
+}
+
+.section-grid {
+  @apply mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3;
+}
